@@ -11,7 +11,7 @@ class DemoQa(BasePage):
         self.icon = WebElement(driver, '#app > header > a')
         self.btn_elements = WebElement(driver, '#app > div > div > div.home-body > div > div:nth-child(1)')
         self.podval_text = WebElement(driver, '#app > footer > span')
-        self.elem_text = WebElement(driver, '#app > div > div > div > div.col-12.mt-4.col-md-6')
+
 
     def exist_icon(self):
         try:
