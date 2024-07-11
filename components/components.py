@@ -1,13 +1,11 @@
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
+
 class WebElement():
     def __init__(self, driver, locator=''):
         self.locator = locator
         self.driver = driver
-
-    def get_text(self):
-        return str(self.find_element().text)
 
     def click(self):
         self.find_element().click()
@@ -22,3 +20,8 @@ class WebElement():
             return True
         return False
 
+    def get_text(self):
+        return str(self.find_element().text)
+
+    def visible(self):
+        return self.find_element().is_displayed()
