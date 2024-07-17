@@ -1,4 +1,7 @@
 from selenium.webdriver.common.by import By
+import logging
+import time
+
 
 class BasePage():
     def __init__(self, driver, base_url):
@@ -27,3 +30,22 @@ class BasePage():
         if self.get_url() == self.base_url:
             return True
         return False
+
+    def alert(self):
+        try:
+            return self.driver.switch_to.alert
+        except Exception as ex:
+            logging.log(1, ex)
+            return False
+
+    def drop(class_name):
+        assert not class_name.modal_backdrop.exist()
+        class_name.btn_add.click_force()
+        class_name.first_name.send_keys('tester')
+        class_name.last_name.send_keys('testerovich')
+        class_name.email.send_keys('AAAA@asad.com')
+        class_name.age.send_keys('25')
+        class_name.salary.send_keys('123')
+        class_name.department.send_keys('department')
+        class_name.btn_modal_submit.click()
+        time.sleep(2)

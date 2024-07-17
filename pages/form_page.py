@@ -1,6 +1,7 @@
 from components.components import WebElement
 from pages.base_page import BasePage
 
+
 class FormPage(BasePage):
 
     def __init__(self, driver):
@@ -20,5 +21,7 @@ class FormPage(BasePage):
 
         self.form = WebElement(driver, '#userForm')
 
-        self.state = WebElement(driver, '#state')
-        self.city = WebElement(driver, '#city')
+        self.btn_state = WebElement(driver, '#state')
+        self.inp_state = WebElement(driver, '#react-select-3-input')
+
+        self.btn_NCR = WebElement(driver, "//*[contains(text(), 'NCR')]", 'xpath')
