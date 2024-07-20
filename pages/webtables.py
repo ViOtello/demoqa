@@ -42,3 +42,30 @@ class WebTables(BasePage):
                                        'div.-center > span.select-wrap.-pageSizeOptions > select')
         self.btn_rows_5 = WebElement(driver, "//*[contains(text(), '5 rows')]", 'xpath')
 
+
+        # заголовки столбцов таблицы
+        self.st_first_name = WebElement(driver, '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[1]', 'xpath')
+        self.st_last_name = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[2]',
+                                        'xpath')
+        self.st_age = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[3]',
+                                        'xpath')
+        self.st_email = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[4]',
+                                        'xpath')
+        self.st_salary = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[5]',
+                                        'xpath')
+        self.st_department = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[6]',
+                                        'xpath')
+        self.st_action = WebElement(driver,
+                                        '//*[@id="app"]/div/div/div/div[2]/div[2]/div[3]/div[1]/div[1]/div/div[7]',
+                                        'xpath')
+
+
+
+
+
+

@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from components.components import WebElement
 import logging
 import time
 
@@ -7,6 +8,7 @@ class BasePage():
     def __init__(self, driver, base_url):
         self.driver = driver
         self.base_url = base_url
+        self.viewport = WebElement(driver, 'head > meta')
 
     def visit(self):
         return self.driver.get(self.base_url)
@@ -49,3 +51,4 @@ class BasePage():
         class_name.department.send_keys('department')
         class_name.btn_modal_submit.click()
         time.sleep(2)
+
